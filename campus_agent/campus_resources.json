@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Library",
+    "aliases": ["lib", "hultquist", "hultquist library"],
+    "location": "Hultquist Library (HULT)",
+    "hours": "Mon-Fri: 9:00 AM - 5:00 PM",
+    "phone": "716-338-1008",
+    "email": "AskALibrarian@sunyjcc.edu",
+    "website": "sunyjcc.edu/support/learning-commons/library",
+    "description": "Provides academic books, research databases, study spaces, and librarian assistance.",
+    "verified_by": "Student Services",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "name": "Career Center",
+    "aliases": ["career", "jobs", "internships"],
+    "location": "Hamilton Collegiate Center (COCE)",
+    "hours": "Mon-Fri: 8:30 AM - 4:30 PM",
+    "phone": "716-338-1061",
+    "email": "CareerServices@sunyjcc.edu",
+    "website": "sunyjcc.edu/support/career-services",
+    "description": "Helps students with resume reviews, career exploration, and job search support.",
+    "verified_by": "Student Services",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "name": "Advising",
+    "aliases": ["advisor", "success center", "academic advising"],
+    "location": "Hamilton Collegiate Center (COCE) - Success Center",
+    "hours": "Mon-Fri: 8:30 AM - 4:30 PM",
+    "phone": "716-338-1065",
+    "email": "SuccessCenter@sunyjcc.edu",
+    "website": "sunyjcc.edu/support/success-center",
+    "description": "Assists students with degree planning, class scheduling, and academic support.",
+    "verified_by": "Student Services",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "name": "Financial Aid",
+    "aliases": ["finaid", "billing", "fafsa", "bursar"],
+    "location": "Hamilton Collegiate Center (COCE) - Floor 1",
+    "hours": "Mon-Fri: 8:30 AM - 4:30 PM",
+    "phone": "716-338-1009",
+    "email": "FinancialAid@sunyjcc.edu",
+    "website": "sunyjcc.edu/support/financial-aid-billing",
+    "description": "Provides help with scholarships, loans, grants, FAFSA assistance, and student billing.",
+    "verified_by": "Student Services",
+    "last_verified": "2026-10-09"
+  },
+  {
+    "name": "IT Help Desk",
+    "aliases": ["helpdesk", "tech support", "computer help", "wifi help"],
+    "location": "Hamilton Collegiate Center (COCE)",
+    "hours": "Mon-Fri: 8:30 AM - 4:30 PM",
+    "phone": "716-338-1122",
+    "email": "JCCHelpDesk@mail.sunyjcc.edu",
+    "website": "sunyjcc.edu/support/technology",
+    "description": "Provides technical assistance with campus Wi-Fi, student accounts, and technology issues.",
+    "verified_by": "Student Services",
+    "last_verified": "2026-10-09"
+  }
+]
