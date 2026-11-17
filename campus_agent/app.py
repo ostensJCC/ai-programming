@@ -12,24 +12,29 @@ import streamlit as st
 import asyncio
 import os
 
-# ADK imports
+# --- 1. Bridge Secrets FIRST (Before any ADK/Agent imports) ---
+if "GOOGLE_API_KEY" not in os.environ:
+    try:
+        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+    except Exception:
+        from dotenv import load_dotenv
+        load_dotenv()
+
+if "GEMINI_API_KEY" not in os.environ and "GOOGLE_API_KEY" in os.environ:
+    os.environ["GEMINI_API_KEY"] = os.environ["GOOGLE_API_KEY"]
+
+if "GOOGLE_API_KEY" not in os.environ or not os.environ["GOOGLE_API_KEY"]:
+    st.error("API Key Not Found. Please configure GOOGLE_API_KEY in Streamlit Secrets.")
+    st.stop()
+
+# --- 2. Safe Imports After Environment is Configured ---
+import asyncio
 from google.adk.runners import Runner
 from google.adk.sessions.in_memory_session_service import InMemorySessionService
 from google.adk.artifacts.in_memory_artifact_service import InMemoryArtifactService
 from google.genai import types
-# Import our agent from Lab 2
 from agent import root_agent, RESOURCE_FILE
 
-# --- Environment and API Key Handling ---
-
-# Handle API key for both local development and Streamlit Cloud deployment
-if "GOOGLE_API_KEY" in st.secrets:
-    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
-if "GEMINI_API_KEY" in st.secrets:
-    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
-elif "GOOGLE_API_KEY" in st.secrets:
-    os.environ["GEMINI_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
-    
 # Verify API key is available before proceeding
 if "GOOGLE_API_KEY" not in os.environ or not os.environ["GOOGLE_API_KEY"]:
     st.error("""
