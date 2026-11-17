@@ -2,6 +2,8 @@ import json
 from pathlib import Path
 from google.adk.agents import Agent
 
+# Testing auto-redeploy
+
 RESOURCE_FILE = Path(__file__).parent / "campus_resources.json"
 
 def get_campus_resource_info(resource_name: str) -> dict:
