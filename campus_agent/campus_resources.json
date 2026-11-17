@@ -58,5 +58,11 @@
     "description": "Provides technical assistance with campus Wi-Fi, student accounts, and technology issues.",
     "verified_by": "Student Services",
     "last_verified": "2026-10-09"
+  },
+  {
+    "name": "Tutoring Center",
+    "aliases": ["tutoring", "tutoring center", "help", "study help"],
+    "location": "Library Room 204",
+    "hours": "Mon-Thu: 9:00 AM - 7:00 PM"
   }
 ]
