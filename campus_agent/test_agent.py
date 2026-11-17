@@ -1,4 +1,4 @@
-from agent import get_campus_resource_info  # Imports directly from agent.py
+from .agent import get_campus_resource_info  # Imports directly from agent.py
 
 def test_library_lookup():
     result = get_campus_resource_info("library")
