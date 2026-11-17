@@ -23,15 +23,13 @@ from agent import root_agent, RESOURCE_FILE
 # --- Environment and API Key Handling ---
 
 # Handle API key for both local development and Streamlit Cloud deployment
-if "GOOGLE_API_KEY" not in os.environ:
-    # Try Streamlit secrets first (for deployment)
-    try:
-        os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
-    except Exception:
-        # Fall back to .env file (for local development)
-        from dotenv import load_dotenv
-        load_dotenv()
-
+if "GOOGLE_API_KEY" in st.secrets:
+    os.environ["GOOGLE_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+if "GEMINI_API_KEY" in st.secrets:
+    os.environ["GEMINI_API_KEY"] = st.secrets["GEMINI_API_KEY"]
+elif "GOOGLE_API_KEY" in st.secrets:
+    os.environ["GEMINI_API_KEY"] = st.secrets["GOOGLE_API_KEY"]
+    
 # Verify API key is available before proceeding
 if "GOOGLE_API_KEY" not in os.environ or not os.environ["GOOGLE_API_KEY"]:
     st.error("""
